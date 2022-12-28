@@ -1,0 +1,38 @@
+const radioButtons = document.querySelectorAll('.radiobuttons__container input')
+const textSlides = document.querySelector('.slider__text_wrapper')
+const backgroundSlides = document.querySelector('.slider__background')
+
+let counter = 0;
+const timer = setInterval(() => {
+  if (counter > 3) {
+    counter = 0;
+  }
+  toggleSlides(counter);
+  counter++;
+}, 3500)
+
+function toggleSlides(num) {
+  textSlides.style.left = `-${
+    num * 100
+  }%`;
+  backgroundSlides.style.left = `-${
+    num * 100
+  }%`;
+  radioButtons[num].checked = true
+}
+
+function handleRadioBtnClick(e) {
+  clearInterval(timer);
+
+  const index = Array.from(radioButtons).indexOf(e.target);
+
+  textSlides.style.left = `-${
+    index * 100
+  }%`;
+
+  backgroundSlides.style.left = `-${
+    index * 100
+  }%`;
+}
+
+radioButtons.forEach(btn => btn.addEventListener('click', handleRadioBtnClick))

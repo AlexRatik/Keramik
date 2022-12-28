@@ -1,0 +1,11 @@
+const dropdownList = document.getElementById('dropdown');
+const burgerBTN = document.getElementById('burger-menu');
+const submenuContainer = document.getElementById('submenu__container');
+
+
+burgerBTN.addEventListener('click', () => {
+
+  dropdownList.classList.add('hidden');
+  burgerBTN.classList.toggle('active');
+  submenuContainer.classList.toggle('show')
+})
