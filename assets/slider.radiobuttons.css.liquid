@@ -1,0 +1,38 @@
+.btn-radio {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.btn-radio:not(:first-of-type) {
+  margin-left: 9px;
+}
+
+.radiobuttons__container {
+  height: 7px;
+  margin-top: 30px;
+}
+
+.radiobuttons__container input {
+  display: none;
+}
+
+.radiobuttons__container label {
+  width: 7px;
+  height: 7px;
+  background: #E8CB9F;
+  border-radius: 50%;
+  transition: 0.35s;
+}
+
+input:checked + label {
+  background: #FFFFFF;
+}
+
+@media(max-width: 580px) {
+  .radiobuttons__container {
+    margin-top: 15px;
+  }
+}

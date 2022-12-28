@@ -1,0 +1,140 @@
+.slider {
+  position: relative;
+}
+
+.slider__container {
+  padding: 75px 19.3% 30px;
+  position: relative;
+}
+
+.slider__background_wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.slider__background {
+  display: flex;
+  width: calc(100% * 4);
+  left: 0;
+  height: 100%;
+  position: relative;
+}
+
+.slider__background_item {
+  float: left;
+  height: 100%;
+}
+
+.slider__background_item img {
+  height: 100%;
+  width: 100%;
+}
+
+.slider__wrapper {
+  color: #FFFFFF;
+  max-width: 58%;
+  overflow: hidden;
+}
+
+.slider__text_wrapper {
+  display: flex;
+  width: calc(100% * 4);
+  left: 0;
+  position: relative;
+}
+
+.slider__text_wrapper .slider__text_item {
+  flex-basis: 100%;
+  width: 100%;
+  float: left;
+}
+
+.slider__wrapper h1 {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 39px;
+
+}
+
+.slider__wrapper p {
+  line-height: 27.5px;
+  margin-top: 45px;
+}
+
+
+
+.slider__main_button {
+  margin-top: 42px;
+  width: 123px;
+  height: 42px;
+  color: #FFFFFF;
+  padding: 11px 20px;
+  background: #F9A82F;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+}
+
+.slider__main_button:hover {
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.animated {
+  transition: all 0.35s ease;
+}
+
+@media(max-width: 1720px) {
+  .slider__container {
+    padding: 75px 8.65% 30px;
+  }
+}
+
+@media(max-width: 960px) {
+  .slider__wrapper h1 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .slider__wrapper p {
+    margin-top: 25px;
+    font-size: 16px;
+  }
+
+  .slider__main_button {
+    margin-top: 20px;
+  }
+}
+
+@media(max-width: 700px) {
+  .slider__container {
+    padding: 25px 8.65%;
+    position: relative;
+  }
+
+  .slider__wrapper h1 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .slider__wrapper p {
+    margin-top: 10px;
+    line-height: 16px;
+    font-size: 14px;
+  }
+
+  .slider__main_button {
+    margin-top: 15px;
+  }
+}
+
+@media(max-width: 540px) {
+  .slider__wrapper {
+    max-width: 70%
+  }
+}

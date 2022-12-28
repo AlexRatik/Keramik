@@ -1,0 +1,36 @@
+{% assign menuIconsLinks = 'heart.svg shopper.svg profile.svg' | split: ' ' %}
+
+<header>
+  <img src="{{'logo.svg' | asset_url }}" alt='logo' />
+
+  <div class="header__phoneWithInput">
+    <div class="header__container_phone">
+      <h3 class="font16x700_000000">+7 926 780 3663</h3>
+      <a href='tel:+7 926 780 3663'>Обратный звонок</a>
+    </div>
+    {% render 'search' %}
+  </div>
+
+  <ul class="header__links">
+
+    <a href="{{routes.all_products_collection_url}}">
+      <li class="header__links_item-data" data-value="{{cart.item_count}}">
+        <img src="{{'heart.svg' | asset_url}}" alt="liked" />
+      </li>
+    </a>
+
+    <a href="{{routes.cart_url}}">
+      <li class="header__links_item-data" data-value="{{cart.item_count}}">
+        <img src="{{'shopper.svg' | asset_url}}" alt="cart" />
+      </li>
+    </a>
+
+    <a href="{{routes.account_url}}">
+      <li>
+        <img src="{{'profile.svg' | asset_url}}" alt="'profile'" />
+      </li>
+    </a>
+
+  </ul>
+
+</header>

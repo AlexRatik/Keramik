@@ -1,0 +1,27 @@
+{% assign list = 'Главная, О нас, Акции, Новости, Контакты' | split: ', ' %}
+<div class="subheader">
+
+  <ul class="submenu__container" id="submenu__container">
+    <li
+      id="catalogBTN"
+      class="font16x700_171717 centred-block"
+      style="color: #F9A82F; gap: 5px;">Каталог<img src="{{'arrowDown.svg' | asset_url}}" alt='arrow' /></li>
+
+    {% for item in list %}
+      <li>
+        <a href="/" class="font16x700_171717">{{ item }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="burger-menu" id="burger-menu">
+    <div class="burger-line"></div>
+    <div class="burger-line"></div>
+    <div class="burger-line"></div>
+  </div>
+  <div id="dropdown" class="hidden">
+    {% for link in linklists.Dropdown.links -%}
+      <a href="{{link.url}}">{{ link.title | upcase }}</a>
+    {%- endfor %}
+  </div>
+</div>

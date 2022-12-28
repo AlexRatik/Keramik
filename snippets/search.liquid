@@ -1,0 +1,14 @@
+<form style="position: relative;">
+
+  <input
+    class="search__input_text"
+    type="text"
+    placeholder="Поиск"
+    name="q"
+    value="{{ search.terms | escape }}">
+
+  <button class="search__button_submit" type="submit">
+    <img src="{{'search.svg' | asset_url}}" />
+  </button>
+
+</form>
